@@ -4,6 +4,8 @@ const dotenv = require("dotenv");
 async function main() {
   const app = express();
   dotenv.config();
+  require("./src/config/mongoose.config");
+
   app.listen(process.env.PORT, () => {
     console.log(`App Run On PORT ${process.env.PORT} `);
   });
